@@ -1,0 +1,63 @@
+# SUMMARY.md
+
+## Project Overview
+
+This project implements a **Convolutional Neural Network (CNN)** using **TensorFlow** and **Keras** to classify handwritten digits from the MNIST dataset. The software includes a full training pipeline, evaluation tools, and a prediction interface that can classify custom images. The repository contains the final working software, prototypes, tests, documentation, commit history, and a demonstration video.
+
+The goal of the project was to build a “classic” AI system using TensorFlow — one of the most widely used deep-learning frameworks — while demonstrating proper software engineering practices, modular design, version control, documentation, and multiple forms of AI-assisted development.
+
+---
+
+## Development Process
+
+### 1. Planning and Specification
+
+Before writing any code, I documented the core features of the project:
+
+- Load and preprocess MNIST data  
+- Build a CNN model using TensorFlow  
+- Train the model with configurable hyperparameters  
+- Save and load trained models  
+- Evaluate accuracy on the test dataset  
+- Predict digits from custom image files  
+- Provide a command-line interface for all operations  
+
+I also designed the final project structure early on, with separate modules for data loading, model definition, training logic, and prediction functionality. This made it easier to maintain and expand the software.
+
+### 2. Prototyping
+
+I created two prototypes before building the final system:
+
+**Prototype 1 – MLP Classifier**  
+A simple fully connected network using flattened MNIST images.  
+Purpose: confirm TensorFlow installation, dataset loading, and basic model training.
+
+**Prototype 2 – Minimal CNN**  
+A small convolutional model to verify convolution layers, pooling layers, and image preprocessing.  
+Purpose: validate the architecture direction before building the final modular version.
+
+These prototypes helped refine the shape of inputs/outputs, learning rates, and training loops.
+
+---
+
+## Final Implementation
+
+The final software was designed using a **modular approach**:
+
+- `model.py` → Builds the CNN architecture  
+- `data.py` → Loads and preprocesses MNIST  
+- `train.py` → Handles training and evaluation  
+- `predict.py` → Loads a model and predicts on custom images  
+- `main.py` → A command-line interface for `train`, `eval`, and `predict` commands  
+
+The CLI supports:
+
+```bash
+python -m src.main train --epochs 5
+python -m src.main eval
+python -m src.main predict --image mydigit.png
+
+
+---
+
+#  **video.txt (https://youtu.be/rVP571ch4Mk?si=cd_uZleiL2DZFpQC)**  
